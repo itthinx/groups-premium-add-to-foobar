@@ -39,7 +39,7 @@ function gpatf_groups_created_user_group( $user_id, $group_id ) {
   if ( $premium_group = Groups_Group::read_by_name( 'Premium' ) ) {
     if ( $premium_group->group_id == $group_id ) {
       if ( $foobar_group = Groups_Group::read_by_name( 'Foobar' ) ) {
-        Groups_User_Group::create( array( 'user_id' => $user_id, 'group_id' => $group_id ) );
+        Groups_User_Group::create( array( 'user_id' => $user_id, 'group_id' => $foobar_group->group_id ) );
       }
     }
   }
