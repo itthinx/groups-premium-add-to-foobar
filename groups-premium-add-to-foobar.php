@@ -33,7 +33,7 @@
 // http://www.itthinx.com/documentation/groups/api/actions/
 // http://api.itthinx.com/groups/class-Groups_User_Group.html
 
-add_action( 'groups_created_user_group', 'gpatf_groups_created_user_group' );
+add_action( 'groups_created_user_group', 'gpatf_groups_created_user_group', 10, 2 );
 
 function gpatf_groups_created_user_group( $user_id, $group_id ) {
   if ( $premium_group = Groups_Group::read_by_name( 'Premium' ) ) {
